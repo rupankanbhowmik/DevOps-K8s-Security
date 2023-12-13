@@ -8,7 +8,7 @@ sh 'mvn clean package'
 }
 stage ('SonarQube Analyses') {
 steps {
-withSonarQubeEnv('sonar6') {
+withSonarQubeEnv('sonar4.7.1') {
 sh 'mvn sonar:sonar -Dsonar.host.url=http://10.0.2.100:9000 -Dsonar.login=admin -Dsonar.password=admin123'
 }
 }
